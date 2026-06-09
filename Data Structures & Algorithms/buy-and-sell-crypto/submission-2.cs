@@ -1,0 +1,13 @@
+public class Solution {
+    public int MaxProfit(int[] prices) {
+        int buy  = int.MaxValue;
+        int profit = 0;
+       for(int i = 0; i< prices.Length ; i++){
+            if(prices[i] < buy )
+                buy = prices[i];
+            else
+            profit = Math.Max(profit, prices[i] - buy) ; 
+       }
+       return profit;
+    }
+}
